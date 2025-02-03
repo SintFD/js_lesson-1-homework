@@ -12,18 +12,20 @@ document.getElementById("task_1").addEventListener("click", function () {
 // в коде как константу
 
 document.getElementById("task_2").addEventListener("click", function () {
-  const age = Number(prompt("Живо год рождения сюды:"));
+  const age = 2025 - Number(prompt("Живо год рождения сюды:"));
   let yearsOld = null;
 
-  if (0 < age && age < 10) {
+  if (age <= 10) {
     yearsOld = "очень молодой";
-  } else if (10 < age && age < 20) {
+  } else if (age <= 30) {
     yearsOld = "юнец";
-  } else if (20 < age && age < 30) {
+  } else if (age <= 40) {
     yearsOld = "почти старый";
-  } else if (30 < age && age < 110) {
+  } else if (age <= 60) {
+    yearsOld = "уже старый";
+  } else if (age <= 110) {
     yearsOld = "очень старый";
-  } else if (age > 110) {
+  } else if (age >= 110) {
     yearsOld = " ещё жив ???";
   }
   alert(`Тебе: ${age}  ,  Ты ${yearsOld}`);
@@ -34,8 +36,16 @@ document.getElementById("task_2").addEventListener("click", function () {
 // 3. Запросите у пользователя длину стороны квадрата и выведите периметр такого квадрата.
 
 document.getElementById("task_3").addEventListener("click", function () {
-  const radius = 4 * Number(prompt("Длина стороны квадрата:"));
-  alert(`Периметр квадрата: ${radius} см`);
+  const length = 4 * Number(prompt("Длина стороны квадрата:"));
+  alert(`Периметр квадрата: ${length} см`);
 });
 
 // --------------------------------------------------------------------------------------------------------------------------
+
+// 4. Запросите у пользователя радиус окружности и выведите
+// площадь такой окружности.
+
+document.getElementById("task_4").addEventListener("click", function () {
+  const radius = Math.PI * Number(prompt("Радиус круга:")) ** 2;
+  alert(`Периметр квадрата: ${radius} см`);
+});
