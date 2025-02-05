@@ -117,18 +117,25 @@ document.getElementById("task_8").addEventListener("click", function () {
 // оператор % (остаток от деления).
 
 document.getElementById("task_9").addEventListener("click", function () {
-  let i = 0;
+  // let i = 0;
   const number = prompt("Введите число");
-  let turnOver = null;
+  // let turnOver = null;
 
-  while (i < number.length) {
-    i++;
-    turnOver = String(turnOver + Number(number[number.length - i]));
-  }
+  // while (i < number.length) {
+  //   i++;
+  //   turnOver = String(turnOver + Number(number[number.length - i]));
+  // }
 
-  alert(turnOver);
+  // alert(turnOver);
 
-  // alert(`${number[2] + number[1] + number[0]}`);
+  // alert(number[2] + number[1] + number[0]);
+
+  const reversedNumber =
+    String(number % 10) +
+    String(Math.floor(number / 10) % 10) +
+    String(Math.floor(number / 100) % 10);
+  alert(reversedNumber);
+  console.log(typeof (number % 10));
 });
 
 // --------------------------------------------------------------------------------------------------------------------------
